@@ -16,7 +16,7 @@ const useAdmin = () => {
     
    })
  
-   return [isAdmin,isAdminPending]
+   return [isAdmin,isAdminLoading]
 };
 
 export default useAdmin;

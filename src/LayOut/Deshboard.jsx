@@ -21,12 +21,12 @@ const Deshboard = () => {
                             Admin Home</NavLink>
                         </li>
                     <li>
-                        <NavLink to='dashboard/addItems'>
+                        <NavLink to='addItems'>
                         <FaUtensils/>
                             Add items</NavLink>
                         </li>
                     <li>
-                        <NavLink to='dashboard/manageItems'>
+                        <NavLink to='manage-items'>
                         <FaList />
                             Manage items ({cart.length}) </NavLink>
                         </li>
