@@ -14,6 +14,8 @@ import AddItems from "../pages/Deshboard/AddItems/AddItems";
 import AdminRoutes from "./AdminRoutes";
 import ManageItems from "../pages/Deshboard/ManageItems/ManageItems";
 import UpdateItem from "../pages/Deshboard/UpdateItem/UpdateItem";
+import Payment from "../pages/Deshboard/Payment/Payment";
+import PaymentHistory from "../pages/Deshboard/PaymentHistory/PaymentHistory";
 
 
 
@@ -56,6 +58,14 @@ export const router = createBrowserRouter([
         {
           path:'cart',
          element:<Cart/>
+        },
+        {
+          path:'payment',
+          element:<Payment/>
+        },
+        {
+          path:'payment-history',
+          element:<PaymentHistory/>
         },
         // admin routes
         {

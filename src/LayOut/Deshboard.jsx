@@ -16,27 +16,27 @@ const Deshboard = () => {
                     {
                         isAdmin? <>
                           <li>
-                        <NavLink to='dashboard/adminHome'>
+                        <NavLink to='/dashboard/adminHome'>
                         <FaHome/>
                             Admin Home</NavLink>
                         </li>
                     <li>
-                        <NavLink to='addItems'>
+                        <NavLink to='/dashboard/addItems'>
                         <FaUtensils/>
                             Add items</NavLink>
                         </li>
                     <li>
-                        <NavLink to='manage-items'>
+                        <NavLink to='/dashboard/manage-items'>
                         <FaList />
                             Manage items ({cart.length}) </NavLink>
                         </li>
                     <li>
-                        <NavLink to='dashboard/bookings'>
+                        <NavLink to='/dashboard/bookings'>
                         <FaBook/>
                             Manage Bookings</NavLink>
                         </li>
                     <li>
-                        <NavLink to='users'>
+                        <NavLink to='/dashboard/users'>
                         <FaUsers/>
                             All Users</NavLink>
                         </li>
@@ -44,29 +44,29 @@ const Deshboard = () => {
                         :
                         <>
                           <li>
-                        <NavLink to='dashboard/userHome'>
+                        <NavLink to='/dashboard/userHome'>
                         <FaHome/>
                             User Home</NavLink>
                         </li>
                     <li>
-                        <NavLink to='dashboard/reservation'>
+                        <NavLink to='/dashboard/reservation'>
                         <FaCalendar/>
                             Reservaton</NavLink>
                         </li>
                     <li>
-                        <NavLink to='dashboard/cart'>
+                        <NavLink to='/dashboard/cart'>
                         <FaShoppingCart />
                             my cart ({cart.length}) </NavLink>
                         </li>
                     <li>
-                        <NavLink to='dashboard/review'>
+                        <NavLink to='/dashboard/review'>
                         <FaAd/>
                             Add Review</NavLink>
                         </li>
                     <li>
-                        <NavLink to='dashboard/booking'>
+                        <NavLink to='/dashboard/payment-history'>
                         <FaList/>
-                            My Booking</NavLink>
+                            Payment History</NavLink>
                         </li>
                         </>
                     }
