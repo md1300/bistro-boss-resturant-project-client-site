@@ -16,6 +16,7 @@ const AuthProdiver = ({children}) => {
  const axiosPublic=useAxiosPublic()
 
  const googleSignIn=()=>{
+    setLoading(true)
     return signInWithPopup(auth, googleProvider)
  }
 
@@ -47,18 +48,23 @@ const AuthProdiver = ({children}) => {
             const userInfo={email:currentUser.email}
             axiosPublic.post('/jwt',userInfo)
             .then(res=>{
+                
                 if(res.data.token){
+                    
                     localStorage.setItem('access-token',res.data.token)
+                   
+                    setLoading(false)
                 }
-               
+                
             })
 
         }
         else{
             // to do something for remove cookies
             localStorage.removeItem('access-token')
+            setLoading(false)
         }
-        setLoading(false)
+        
     })
     return ()=>{
         unSubscribe()

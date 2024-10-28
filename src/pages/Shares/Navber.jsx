@@ -3,15 +3,30 @@ import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProdiver';
 import { HiShoppingCart } from "react-icons/hi";
 import useCart from '../../Hooks/useCart';
+import useAdmin from '../../Hooks/useAdmin';
 
 
 const Navber = () => {
   const { user, logOut } = useContext(AuthContext)
   const [cart]=useCart()
+  const [isAdmin]=useAdmin()
   const navOptions = <>
     <li><NavLink to='/'>Home</NavLink></li>
     <li><NavLink to='/menu'>Our Menu</NavLink></li>
     <li><NavLink to='/order/salad'>Order Food</NavLink></li>
+    {/* <li><NavLink to='/dashboard/user-home'>dashboard</NavLink></li> */}
+    
+    {/* <li><NavLink to='/dashboard/admin-home'>dashboard</NavLink></li> */}
+    {
+      // user? 'true':'false'
+      // user? isadmin? 'double true':'true':'false'
+    }
+    {
+      user && isAdmin && <li><NavLink to='/dashboard/admin-home'>dashboard</NavLink></li>
+    }
+    {
+      user&& !isAdmin && <li><NavLink to='/dashboard/user-home'>dashboard</NavLink></li>
+    }
     <li>
       <NavLink to='/dashboard/cart'><button className='flex gap-2 items-center'>
       <HiShoppingCart />
@@ -30,6 +45,7 @@ const Navber = () => {
 
 
   </>
+  
   return (
     <div>
       <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white">
